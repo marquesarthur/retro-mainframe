@@ -21,3 +21,20 @@ pre {
 #input::before {
   content: "> ";
 }
+
+
+/* Class that will eventually be removed to letters in the for loop*/
+.typeAction {
+	visibility:hidden;
+}
+
+/*Below targets the cursor's animation & colour*/
+span {
+	padding-left:1px;
+	animation: blink 700ms steps(1) infinite: ;
+  -webkit-animation: blink 700ms steps(1) infinite;
+}
+
+	@keyframes blink { 50% { color: transparent; } }
+	@-webkit-keyframes blink { 50% { color: transparent; } }
+}
