@@ -4,20 +4,50 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>Bugout chat tutorial</title>
-  <link rel="stylesheet" type="text/css" href="index.css" />
+  
   <script>
     function log(message) {
-      document.getElementById("log").textContent += message + "\n";
+
+    var newLog = `<p title=\"${message}\">${message}</p>`;
+    document.getElementById("log").innerHTML += "\n" + newLog + "\n";
+
+    // document.getElementById("log").textContent += message + "\n";
     }
   </script>
+  <link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
 
   <script src="https://chr15m.github.io/bugout/bugout.min.js" type="application/javascript"></script>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <link rel="stylesheet" type="text/css" href="css/glitch.css" />
 </head>
 <body>
-  <pre id="log"></pre>
-  <pre id="input" contenteditable="true"></pre>
+  
+  <div class="container">
+
+    <p title="404">404</p>
+
+
+    <div id="log">
+
+    </div>
+    
+    <div id="user-input">
+      <pre id="input" contenteditable="true"></pre>
+    </div>
+
+  </div>
 </body>
-<script type="text/javascript" src="chat.js"></script> 
+<script type="text/javascript" src="js/mgGlitch.min.js"></script> 
+<script type="text/javascript" src="js/chat.js"></script> 
 
 </html>
