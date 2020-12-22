@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
 
   <!-- typewriter sound -->
   <audio class="sound" src="typewriter/typewriter-key-even.wav"></audio>
@@ -25,24 +29,76 @@
   <!-- My own scripts -->
   <link rel="stylesheet" type="text/css" href="css/index.css" />
   <link rel="stylesheet" type="text/css" href="css/glitch.css" />
+  <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+
+
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Bootstrap Sidebar</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="#">Page 1</a>
+                  </li>
+                  <li>
+                      <a href="#">Page 2</a>
+                  </li>
+                  <li>
+                      <a href="#">Page 3</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">Portfolio</a>
+          </li>
+          <li>
+              <a href="#">Contact</a>
+          </li>
+      </ul>
+  </nav>
+
+    <div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-outline">
+                <span class="glyphicon glyphicon-folder-open"></span>
+            </button>
+
+            <button type="button" id="mute-button" class="btn btn-outline"  onclick="toggleSound();">
+              <span class="glyphicon glyphicon-volume-up fa-lg"></span>
+            </button>
+        </div>
+      </nav>
   
-  <div class="container">
-
-    <p id="welcome"></p>
-    <br>
-
-
-    <div id="log">
-
-    </div>
-    
-    <div id="user-input">
-      <pre id="input" contenteditable="true"></pre>
+  
+      <p id="welcome"></p>
+      <br>
+  
+  
+      <div id="log">
+  
+      </div>
+      
+      <div id="user-input">
+        <pre id="input" contenteditable="true"></pre>
+      </div>
+  
     </div>
 
   </div>
+
+  
 </body>
 <script type="text/javascript" src="js/mgGlitch.min.js"></script> 
 <script type="text/javascript" src="js/chat.js"></script> 

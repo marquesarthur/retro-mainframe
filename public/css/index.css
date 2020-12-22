@@ -4,6 +4,24 @@ body {
   padding: 0em 0.25em;
 }
 
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #333;
+  color: #fff;
+  transition: all 0.3s;
+}
+
 pre {
   color: #50b480;
   white-space: pre-wrap;
@@ -37,4 +55,34 @@ span {
 
 	@keyframes blink { 50% { color: transparent; } }
 	@-webkit-keyframes blink { 50% { color: transparent; } }
+}
+
+
+.btn-outline {
+  color: #4fbfa8;
+  background-color: #333;
+  outline:none; 
+  border-style: none;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.btn-outline {
+  color: #4fbfa8;
+  background-color: #333;
+  outline:none; 
+  border-style: none;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline.active {
+  background: #4fbfa8;
+  color: #ffffff;
+  outline:none; 
+  border-style: none;
+  
 }

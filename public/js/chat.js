@@ -2,7 +2,9 @@ var logIdx = 0;
 var ENTER = "Enter";
 var TYPEWRITER_SPEED = 50;
 var b = undefined;
+var sound = true;
 
+var muteBtn = document.getElementById('mute-button');
 
 var GLITCH = {
     destroy: false, // set 'true' to stop the plugin
@@ -19,7 +21,9 @@ var GLITCH = {
 
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 function typeWriter(id, message, i) {
-    $("#printer-audio").get(0).play();
+    if (sound){
+        $("#printer-audio").get(0).play();
+    }
     if (i < message.length) {
         document.getElementById(id).innerHTML += message.charAt(i);
         i++;
@@ -62,6 +66,40 @@ function createServer() {
     }
 }
 
+function createNavBar() {
+    $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+}
+
+function changeButtonType(btn, value) {
+    btn.title = value;
+
+    var span = btn.querySelector('.glyphicon');
+    span.classList.remove('glyphicon-volume-off', 'glyphicon-volume-up');
+    span.classList.add('glyphicon-' + value);
+}
+
+function toggleSound() {
+    if (sound) {
+        changeButtonType(muteBtn, 'volume-off');
+        sound = false;
+    } else {
+        changeButtonType(muteBtn, 'volume-up');
+        sound = true;
+    }
+}
+
 // MAIN
 $(function () {
     // Execute a function when the user releases a key on the keyboard
@@ -75,12 +113,17 @@ $(function () {
     });
 
     $("#input").on("keyup", function (event) {
-        var audio = new Audio('typewriter/typewriter-key-even.wav');
-        audio.play();
+        if (sound){
+            var audio = new Audio('typewriter/typewriter-key-even.wav');
+            audio.play();
+        }        
     });
+
+
 
     var welcomeMessage = "Please wait... establishing connection";
     typeWriter("welcome", welcomeMessage, 0);
-    
+
+    createNavBar();
     createServer();
 });
