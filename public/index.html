@@ -44,7 +44,7 @@
 
 
   <div class="wrapper">
-    <!-- Sidebar -->
+    <!-- Sidebar - START -->
     <nav id="sidebar">
       <div class="sidebar-header">
         <h3>Bootstrap Sidebar</h3>
@@ -71,77 +71,80 @@
         <li>
           <a href="#">Contact</a>
         </li>
-
-        
       </ul>
 
       <div class="container">
-            <p id="array-a" title=""></p>
-            <p id="array-b" title=""></p>
-            <p id="array-c" title=""></p>
+        <p id="array-a" title=""></p>
+        <p id="array-b" title=""></p>
+        <p id="array-c" title=""></p>
       </div>
 
-      <!-- Carousel -->
+      <!-- https://codepen.io/CapySloth/pen/KvppPG -->
 
 
+    </nav>
+    <!-- Sidebar - END -->
 
-      <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <!-- TOP MENU - START -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+
+        <button type="button" id="sidebarCollapse" class="btn btn-outline">
+          <span class="glyphicon glyphicon-folder-open"></span>
+        </button>
+
+        <button type="button" id="mute-button" class="btn btn-outline" onclick="toggleSound();">
+          <span class="glyphicon glyphicon-volume-up fa-lg"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- TOP MENU - END -->
+    <!-- MAIN - START -->
+    <div id="content">
+      <p id="welcome"></p>
+      <br>
+
+      <div id="log">
+        <div id="anchor"></div>
+      </div>
+      <div id="user-input">
+        <pre id="input" contenteditable="true"></pre>
+      </div>
+    </div>
+    
+    <!-- MAIN - END -->
+    <!-- <div class="footer navbar-fixed-bottom">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <div class="container">
-              <div class="carousel-caption text-left">
+              <div class="carousel-caption">
                 <p>sdfsdfsdf</p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="container">
-              <div class="carousel-caption text-left">
+              <div class="carousel-caption">
                 <p>dfsdfsdf</p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="container">
-              <div class="carousel-caption text-left">
+              <div class="carousel-caption">
                 <p>sdfsdfsdf</p>
               </div>
             </div>
           </div>
         </div>
-      </div> -->
-    </nav>
-
-    <div id="content">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-
-          <button type="button" id="sidebarCollapse" class="btn btn-outline">
-            <span class="glyphicon glyphicon-folder-open"></span>
-          </button>
-
-          <button type="button" id="mute-button" class="btn btn-outline" onclick="toggleSound();">
-            <span class="glyphicon glyphicon-volume-up fa-lg"></span>
-          </button>
-        </div>
-      </nav>
-
-
-      <p id="welcome"></p>
-      <br>
-
-
-      <div id="log">
-
       </div>
-
-      <div id="user-input">
-        <pre id="input" contenteditable="true"></pre>
-      </div>
-
-    </div>
+    </div> -->
 
   </div>
+
+
+
 
 
 </body>

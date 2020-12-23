@@ -37,11 +37,16 @@ function typeWriter(id, message, i) {
 
 function log(message) {
     // var newLog = `<p title=\"${message}\">${message}</p>`;
-    var newLog = `<p id=\"log-${logIdx}\"></p>`;
-    document.getElementById("log").innerHTML += "\n" + newLog + "\n";
+    // var newLog = `<p id=\"log-${logIdx}\"></p>`;
+    // document.getElementById("log").innerHTML += "\n" + newLog + "\n";
+    
+    // document.getElementById("log").textContent += message + "\n";
+
+    let msg = document.createElement('p');
+    msg.id = `log-${logIdx}`;
+    document.getElementById("log").insertBefore(msg, document.getElementById("anchor"));
     typeWriter(`log-${logIdx}`, message, 0);
     logIdx += 1;
-    // document.getElementById("log").textContent += message + "\n";
 }
 
 
