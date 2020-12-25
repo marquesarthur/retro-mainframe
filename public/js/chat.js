@@ -106,6 +106,10 @@ $(function () {
         }        
     });
 
+    $('#input').keyboard({
+        theme: 'monokai',
+    });
+
     var welcomeMessage = "Please wait... establishing connection";
     typeWriter("welcome", welcomeMessage, 0);
 

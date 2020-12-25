@@ -1,0 +1,223 @@
+div#keyboard{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-left: 5.5% !important;
+    padding-right: 5.5% !important;
+}
+
+div#keyboard div{
+    padding: 1px 1px 1px 1px !important;
+}
+
+div#keyboard div#gatekeeper{
+    height: 215px;
+}
+
+div#keyboard button.uppercase{
+    text-transform: uppercase;
+}
+
+div#keyboard #numpad
+{
+    padding:  3px 0 0 3px !important;
+    width: 166px;
+    border-radius: 0 5px 5px 0;
+}
+
+div#keyboard #keypad
+{
+    padding:  3px 3px 0 2px !important;
+    border-radius: 5px 0 0 5px;
+}
+
+/*@media screen and (min-width: 700px)*/
+@media screen and (min-width: 700px)
+{
+    div#keypad button.char{
+        /*width: 50px;            /* Ancho de las teclas */
+        width: 8.5%;            /* Ancho de las teclas */
+    }
+    div#numpad button.char{
+        width: 30%;            /* Ancho de las teclas */
+
+    }
+    div#keyboard button
+    {
+        height: 50px;           /* Alto de las teclas */
+        float: left;
+        margin: 0 0 3px 3px;
+        text-align: center;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        cursor: pointer;
+    }
+
+    div#keyboard button.div
+    {
+        width: 4%;
+        background: transparent !important;
+        border: none !important;
+        cursor: default;
+    }
+
+    div#keyboard button.backspace
+    {
+        width: 9.5%;
+    }
+
+    div#keyboard button.delete
+    {
+        width:11%;
+    }
+
+    div#keyboard button.capslock
+    {
+        width:18.5%;
+    }
+
+    div#keyboard button.submit
+    {
+        width: 62.5%;
+    }
+
+    div#keyboard button.enter
+    {
+        width: 12%;
+    }
+
+    div#keyboard button.shift
+    {
+        width: 12.5%;
+    }
+
+    div#keyboard button.space
+    {
+        width:70%;
+        margin-left: 115px;
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+/*@media only screen and (min-width: 481px) and (max-width: 768px) {
+    div#gatekeeper{
+        width: 300px;
+    }
+}*/
+
+/* Medium devices (desktops, 992px and up)
+@media (min-width: @screen-md-min) {
+
+}*/
+
+/* Large devices (large desktops, 1200px and up)
+@media (min-width: @screen-lg-min) {  }*/
+
+/*********************************/
+/**** Temas para el keyboard  ****/
+/*********************************/
+
+/*********** default **********/
+div#keyboard .default{
+    background:#eee;        /* Color de fondo del teclado */
+    font-size:14px;         /* Tamaño de la letra */
+
+    /* Tipo de letra */
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+div#keyboard .default button{
+    background:#fff;                /* Color de las teclas */
+    border:1px solid #cacaca;       /* borde de las teclas */
+}
+
+/* Teclas especiales activas. Ejemplo: Shift y CapsLock */
+div#keyboard .default button.active{
+    background-color: #d2ffc3;
+    border-color:#6FDA54;
+    font-weight: bold;
+}
+
+/* Color de las teclas al pasarle por encima */
+div#keyboard .default button:hover{
+    color: #ffffff;
+    background-color:#4fbfa8;
+    border-color: #CDE2D6;
+    font-weight: bold;
+}
+
+
+/*********** monokai **********/
+div#keyboard .monokai{
+    background: #333;        /* Color de fondo del teclado */
+    font-size:8px;             /* Tamaño de la letra */
+
+
+    /* Tipo de letra */
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+div#keyboard .monokai button{
+    /* Color de las teclas */
+    background: -webkit-radial-gradient(#333, #39554093);
+    background: -moz-radial-gradient(#333, #39554093);
+    background: -o-radial-gradient(#333, #39554093);
+
+    border:1px solid #83B799;           /* borde de las teclas */
+
+    color: #50b480;                     /* Color de la letra*/
+    font-weight: normal;                  /* Letras en negrita */
+    font-size: 1.0em;
+}
+
+/* Teclas especiales activas. Ejemplo: Shift y CapsLock */
+div#keyboard .monokai button.active{
+    background: #d2ffc3;
+    border-color:#6FDA54;
+
+    color: black;                       /* Color de la letra*/
+    font-weight: bold;                  /* Letras en negrita */
+}
+
+/* Color de las teclas al pasarle por encima */
+div#keyboard .monokai button:hover{
+    background: #4fbfa8;
+    color: #fff;
+    font-weight: bold;
+    border-color: #CDE2D6;
+}
+
+
+/*********** orange **********/
+div#keyboard .orange{
+    background: #3c3f41;        /* Color de fondo del teclado */
+    font-size:14px;             /* Tamaño de la letra */
+    color: #c4d9ee;
+    font-weight: bold;
+
+    /* Tipo de letra */
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+div#keyboard .orange button{
+    background: #ffd97f;                /* Color de las teclas */
+    border:2px solid #51668c;           /* borde de las teclas */
+}
+
+/* Teclas especiales activas. Ejemplo: Shift y CapsLock */
+div#keyboard .orange button.active{
+    background-color: #d2ffc3;
+    border-color:#6FDA54;
+    font-weight: bold;
+}
+
+/* Color de las teclas al pasarle por encima */
+div#keyboard .orange button:hover{
+    background-color:#FFD488;
+    border-color:#FFAE6E;
+    color: #2e4058;
+    font-weight: bold;
+}
