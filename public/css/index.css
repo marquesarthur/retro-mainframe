@@ -15,8 +15,22 @@ body {
   bottom: 30px;
   right: 0;
   left: 0;
-  overflow-y: auto;
 }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#log {
+  overflow-x:hidden;
+  overflow-y:scroll;
+  height:600px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#log::-webkit-scrollbar {
+  display: none;
+}
+
 
 #sidebar {
   width: 250px;

@@ -1,10 +1,11 @@
 var logIdx = 0;
 var ENTER = "Enter";
-var TYPEWRITER_SPEED = 50;
+var TYPEWRITER_SPEED = 25;
 var b = undefined;
 var sound = false; // false is better for testing purposes
 
 var muteBtn = document.getElementById('mute-button');
+var anchoDiv = document.getElementById("anchor");
 
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 function typeWriter(id, message, i) {
@@ -25,12 +26,12 @@ function typeWriter(id, message, i) {
 function log(message) {
     let msg = document.createElement('p');
     msg.id = `log-${logIdx}`;
-    document.getElementById("log").insertBefore(
-        msg, 
-        document.getElementById("anchor")
-    );
+    document.getElementById("log").insertBefore(msg, anchoDiv);
     typeWriter(`log-${logIdx}`, message, 0);
     logIdx += 1;
+
+    var elem = document.getElementById('log');
+    elem.scrollTop = elem.scrollHeight;
 }
 
 
