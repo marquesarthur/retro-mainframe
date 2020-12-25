@@ -1,12 +1,21 @@
+
+
 body {
   background-color: #333;
   font-size: 1.5em;
   padding: 0em 0.25em;
+  overflow: hidden;
 }
 
 .wrapper {
   display: flex;
   width: 100%;
+  position: absolute;
+  top: 50px;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
 #sidebar {
@@ -37,15 +46,6 @@ pre {
 
 #input::before {
   content: "> ";
-}
-
-#log * {
-  overflow-anchor: none;
-}
-
-#anchor {
-  overflow-anchor: auto;
-  height: 1px;
 }
 
 /* Class that will eventually be removed to letters in the for loop*/
@@ -94,6 +94,9 @@ span {
   
 }
 
+a.navbar-brand {
+  color: #4fbfa8;
+}
 
 
 

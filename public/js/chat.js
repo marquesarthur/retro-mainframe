@@ -2,22 +2,9 @@ var logIdx = 0;
 var ENTER = "Enter";
 var TYPEWRITER_SPEED = 50;
 var b = undefined;
-var sound = true;
+var sound = false; // false is better for testing purposes
 
 var muteBtn = document.getElementById('mute-button');
-
-var GLITCH = {
-    destroy: false, // set 'true' to stop the plugin
-    glitch: true, // set 'false' to stop glitching
-    scale: true, // set 'false' to stop scaling
-    blend: true, // set 'false' to stop glitch blending
-    blendModeType: 'hue', // select blend mode type
-    glitch1TimeMin: 600, // set min time for glitch 1 elem
-    glitch1TimeMax: 900, // set max time for glitch 1 elem
-    glitch2TimeMin: 10, // set min time for glitch 2 elem
-    glitch2TimeMax: 115, // set max time for glitch 2 elem
-    zIndexStart: 8, // because of absolute position, set z-index base value
-};
 
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_typewriter
 function typeWriter(id, message, i) {
@@ -36,23 +23,17 @@ function typeWriter(id, message, i) {
 }
 
 function log(message) {
-    // var newLog = `<p title=\"${message}\">${message}</p>`;
-    // var newLog = `<p id=\"log-${logIdx}\"></p>`;
-    // document.getElementById("log").innerHTML += "\n" + newLog + "\n";
-    
-    // document.getElementById("log").textContent += message + "\n";
-
     let msg = document.createElement('p');
     msg.id = `log-${logIdx}`;
-    document.getElementById("log").insertBefore(msg, document.getElementById("anchor"));
+    document.getElementById("log").insertBefore(
+        msg, 
+        document.getElementById("anchor")
+    );
     typeWriter(`log-${logIdx}`, message, 0);
     logIdx += 1;
 }
 
 
-
-
-// log("hello world!");
 function createServer() {
     try {
         b = Bugout("bugout-chat-tutorial");
@@ -123,8 +104,6 @@ $(function () {
             audio.play();
         }        
     });
-
-
 
     var welcomeMessage = "Please wait... establishing connection";
     typeWriter("welcome", welcomeMessage, 0);
