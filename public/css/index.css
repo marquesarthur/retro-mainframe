@@ -104,7 +104,10 @@ span {
 .btn-outline:active,
 .btn-outline:focus,
 .btn-outline.active {
-  background: #4fbfa8;
+
+  background: -webkit-radial-gradient(#333, #4fbfa8);
+  background: -moz-radial-gradient(#333, #4fbfa8);
+  background: -o-radial-gradient(#333, #4fbfa8);
   color: #ffffff;
   outline:none; 
   border-style: none;

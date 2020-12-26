@@ -184,7 +184,9 @@ div#keyboard .monokai button.active{
 
 /* Color de las teclas al pasarle por encima */
 div#keyboard .monokai button:hover{
-    background: #4fbfa8;
+    background: -webkit-radial-gradient(#333, #4fbfa8);
+    background: -moz-radial-gradient(#333, #4fbfa8);
+    background: -o-radial-gradient(#333, #4fbfa8);
     color: #fff;
     font-weight: bold;
     border-color: #CDE2D6;

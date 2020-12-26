@@ -70,7 +70,9 @@
 }
 
 #sidebar ul li a:hover {
-    background: #4fbfa8;
+    background: -webkit-radial-gradient(#333, #4fbfa8);
+    background: -moz-radial-gradient(#333, #4fbfa8);
+    background: -o-radial-gradient(#333, #4fbfa8);
     color: #ffffff;
 }
 
@@ -115,7 +117,9 @@ a.download {
 
 a.article,
 a.article:hover {
-    background: #4fbfa8 !important;
+    background: -webkit-radial-gradient(#333, #4fbfa8);
+    background: -moz-radial-gradient(#333, #4fbfa8);
+    background: -o-radial-gradient(#333, #4fbfa8);
     color: #fff !important;
 }
 
