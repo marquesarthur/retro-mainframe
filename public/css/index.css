@@ -49,8 +49,14 @@ pre {
   color: #50b480;
   white-space: pre-wrap;
   word-wrap: break-word;
-  text-shadow: 0 0 10px #83B799;
-  
+  text-shadow: 0 0 10px #83B799;  
+}
+
+label {
+  color: #50b480;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-shadow: 0 0 10px #83B799;  
 }
 
 #input {
@@ -110,8 +116,7 @@ span {
   background: -o-radial-gradient(#333, #4fbfa8);
   color: #ffffff;
   outline:none; 
-  border-style: none;
-  
+  border-style: none;  
 }
 
 a.navbar-brand {

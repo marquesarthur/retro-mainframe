@@ -3,6 +3,7 @@ var ENTER = "Enter";
 var TYPEWRITER_SPEED = 25;
 var b = undefined;
 var sound = false; // false is better for testing purposes
+var user = undefined;
 
 var muteBtn = document.getElementById('mute-button');
 var anchoDiv = document.getElementById("anchor");
@@ -35,9 +36,10 @@ function log(message) {
 }
 
 
-function createServer() {
+function createServer(room, loginTmp) {
     try {
-        b = Bugout("bugout-chat-tutorial");
+        user = loginTmp;
+        b = Bugout(room);
         b.on("seen", function (address) {
             log(address + " [ connected ]");
         });
@@ -113,6 +115,21 @@ $(function () {
     var welcomeMessage = "Please wait... establishing connection";
     typeWriter("welcome", welcomeMessage, 0);
 
+    // TODO: enable when done
+    // var form = $('<form>' +
+    //         '<input type="text" id="server" name="server" placeholder="room"/>&nbsp;&nbsp;'+
+    //         '<input type="radio" id="muthur" name="login" value="muthur">&nbsp;'+
+    //         '<label for="nuthur">MU/TU/UR</label>&nbsp;&nbsp;'+
+    //         '<input type="radio" id="player" name="login" value="player">&nbsp;'+
+    //         '<label for="player">User</label>'+
+    //     '</form>');
+
+    // bootbox.alert(form, function(){
+    //     var roomTmp = $('input[name=server]').val();
+    //     var loginTmp = $('input[name=login]:checked').val()
+    //     createServer(roomTmp, loginTmp);
+    // });
+    createServer("muthur", "muthur");
+
     createNavBar();
-    createServer();
 });

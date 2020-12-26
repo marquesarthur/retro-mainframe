@@ -1,0 +1,59 @@
+/* <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+        <button type="button" class="bootbox-close-button close" aria-hidden="true">×</button>
+            <div class="bootbox-body">
+                <form _lpchecked="1"><input type="text" name="login">&nbsp;
+                    <input type="text" name="player">
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-primary bootbox-accept">OK</button></div>
+    </div>
+</div>  */
+
+.modal-content {
+    background: #333;
+    border: 1px solid #83B799;
+}
+
+.modal-footer {
+    border-top: 1px solid #83B799;
+}
+
+.bootbox-accept {
+    color: #4fbfa8;
+    background-color: #333;
+    outline: none;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 0;
+}
+
+.bootbox-accept:hover, .bootbox-accept:active, .bootbox-accept:focus, .bootbox-accept.active {
+    background: #333;
+    color: #4fbfa8;
+    outline: none;
+    border-style: none;
+}
+
+.close {
+    text-shadow: none;
+}
+
+input[type=text] {
+    color: #50b480;
+    border-bottom: 1px solid #83B799;
+    background-color: #383838;
+    padding: 0.25em;
+    outline: 0;
+    font-weight: normal;
+    width: 300px;
+}
+
+label {
+    color: #50b480;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-shadow: 0 0 10px #83B799;  
+  }

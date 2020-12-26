@@ -12,7 +12,7 @@
   <!-- https://github.com/hmongouachon/mgGlitch -->
   <script src="https://chr15m.github.io/bugout/bugout.min.js" type="application/javascript"></script>
 
-  <!-- Bootstrap setup -->
+  <!-- external libraries -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -22,7 +22,12 @@
     crossorigin="anonymous"></script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>   
+  
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js/dist/pixi.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pixi-filters/dist/pixi-filters.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+  
 
   <!-- typewriter sound -->
   <audio class="sound" src="typewriter/typewriter-key-even.wav"></audio>
@@ -36,6 +41,7 @@
   <link rel="stylesheet" type="text/css" href="css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="css/carousel.css" />
   <link rel="stylesheet" type="text/css" href="css/keyboard.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootbox.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -62,7 +68,9 @@
           </button>
         </li>
         <li>&nbsp;</li>
+        
       </ul>
+      
     </div>
   </div>
   <!-- TOP MENU - END -->
@@ -102,6 +110,11 @@
         <p id="array-c" title=""></p>
       </div>
 
+      
+      
+
+      
+
     </nav>
     <!-- Sidebar - END -->
 
@@ -114,6 +127,7 @@
       <br>
 
       <div id="log">
+        <canvas id="example"></canvas>
         <div id="anchor"></div>
       </div>
 
@@ -144,6 +158,7 @@
 
 
 </body>
+<script src="js/LiquidEffect.js"></script>
 <script type="text/javascript" src="js/mgGlitch.min.js"></script>
 <script type="text/javascript" src="js/keyboard.js"></script>
 <script type="text/javascript" src="js/chat.js"></script>
