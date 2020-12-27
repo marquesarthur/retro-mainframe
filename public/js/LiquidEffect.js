@@ -9,8 +9,8 @@ class glitch {
   
       const app = new PIXI.Application({
         view: canvas,
-        width: 600,
-        height: 700,
+        width: 800,
+        height: 800,
         transparent: true
       })
   

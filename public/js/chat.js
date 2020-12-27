@@ -48,6 +48,12 @@ function createServer(room, loginTmp) {
             log(address + ": " + message);
         });
 
+        if (user === "muthur") {
+            $("#image-form").show();
+        } else {
+            $("#image-form").hide();
+        }
+
         return b;
     } catch (ex) {
         console.log(ex);
@@ -107,6 +113,13 @@ $(function () {
             audio.play();
         }        
     });
+
+    $('#imageUpload').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $("#imageUpload-value").html(fileName);
+    })
 
     $('#input').keyboard({
         theme: 'monokai',

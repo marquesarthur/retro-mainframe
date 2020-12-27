@@ -22,7 +22,7 @@ body {
 #log {
   overflow-x:hidden;
   overflow-y:scroll;
-  height:450px;
+  height:425px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -52,13 +52,6 @@ pre {
   text-shadow: 0 0 10px #83B799;  
 }
 
-label {
-  color: #50b480;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  text-shadow: 0 0 10px #83B799;  
-}
-
 #input {
   border-bottom: 1px solid #83B799;
   background-color: #383838;
@@ -69,6 +62,14 @@ label {
 
 #input::before {
   content: "> ";
+}
+
+.form-control {
+  border-bottom: 1px solid #83B799;
+  background-color: #383838;
+  padding: 0.25em;
+  outline: 0;
+  font-weight: normal;
 }
 
 /* Class that will eventually be removed to letters in the for loop*/
@@ -110,7 +111,23 @@ span {
 .btn-outline:active,
 .btn-outline:focus,
 .btn-outline.active {
+  background: -webkit-radial-gradient(#333, #4fbfa8);
+  background: -moz-radial-gradient(#333, #4fbfa8);
+  background: -o-radial-gradient(#333, #4fbfa8);
+  color: #ffffff;
+  outline:none; 
+  border-style: none;  
+}
 
+.btn-default {
+  color: #4fbfa8;
+  background-color: #333;  
+}
+
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.btn-default.active {
   background: -webkit-radial-gradient(#333, #4fbfa8);
   background: -moz-radial-gradient(#333, #4fbfa8);
   background: -o-radial-gradient(#333, #4fbfa8);
