@@ -113,6 +113,22 @@
     </nav>
     <!-- Sidebar - END -->
 
+    <!-- Modal - START -->
+    <div class="modal fade" id="incomingData" tabindex="-1" role="dialog" aria-labelledby="incomingData">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- <img id="myImage" class="img-responsive" src="" alt=""> -->
+            <canvas id="canvasData"></canvas>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal - END -->
+
 
 
 
@@ -123,6 +139,14 @@
 
       <div id="log">
         <!-- <canvas id="example" class="center"></canvas> -->
+        <div>
+          <p title="TRANSMISSION INCOMING">TRANSMISSION INCOMING
+            <button class="btn btn-default" style="border: none;" id="upload">
+              <span class="glyphicon glyphicon-download-alt"></span>
+            </button>
+          </p>
+        </div>
+
         <div id="anchor"></div>
       </div>
 
@@ -148,11 +172,8 @@
         <form class="form-horizontal" id="image-form">
           <div class="form-group">
             <div class="col-md-11">
-              <input id="file-upload" 
-              class="form-control input-sm" 
-              type="file" 
-              style="margin-left: -15px; color: #4fbfa8;" 
-              />
+              <input id="file-upload" class="form-control input-sm" type="file"
+                style="margin-left: -15px; color: #4fbfa8;" />
             </div>
             <button type="submit" class="btn btn-default pull-right">
               <span class="glyphicon glyphicon-floppy-disk"></span>

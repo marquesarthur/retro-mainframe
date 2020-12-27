@@ -1,26 +1,28 @@
 // https://codepen.io/SupremoHQ/pen/vYEvMGG
 class glitch {
   
-    constructor(el, from) {
+    constructor(el, base64) {
   
       // create stage
-      const imgLink = from
+      const imgLink = base64
       const canvas = document.getElementById(el);
+
+      var tmpImg = new Image()
+      tmpImg.src = base64
   
       const app = new PIXI.Application({
         view: canvas,
-        width: 800,
-        height: 800,
+        width: tmpImg.width + 200,
+        height: tmpImg.height + 200,
         transparent: true
       })
   
       // image
-      const texture = PIXI.Texture.from(imgLink)
-      this.img = new PIXI.Sprite(texture)
+      this.img = new PIXI.Sprite.from(imgLink)
   
       // center image
-      this.img.width = 1300
-      this.img.height = 900
+      this.img.width = 100
+      this.img.height = 100
       this.img.x = (app.screen.width / 2) - 30
       this.img.y = app.screen.height / 2
       this.img.anchor.x = 0.5

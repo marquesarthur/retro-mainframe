@@ -114,19 +114,17 @@ $(function () {
         }        
     });
 
-    $('#imageUpload').on('change',function(){
-        //get the file name
-        var fileName = $(this).val();
-        //replace the "Choose a file" label
-        $("#imageUpload-value").html(fileName);
-    })
-
     $('#input').keyboard({
         theme: 'monokai',
     });
 
     var welcomeMessage = "Please wait... establishing connection";
     typeWriter("welcome", welcomeMessage, 0);
+
+    $("#upload").on("click", function () {
+        
+        $('#incomingData').modal('show');
+    });
 
     // TODO: enable when done
     // var form = $('<form>' +
@@ -145,4 +143,6 @@ $(function () {
     createServer("muthur", "muthur");
 
     createNavBar();
+
+    new glitch("canvasData", 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==');
 });
