@@ -22,7 +22,7 @@ body {
 #log {
   overflow-x:hidden;
   overflow-y:scroll;
-  height:425px;
+  height:700px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }

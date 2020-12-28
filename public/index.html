@@ -47,7 +47,6 @@
 </head>
 
 <body>
-
   <!-- TOP MENU - START -->
   <!-- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_right&stacked=h -->
   <div class="footer navbar-fixed-top">
@@ -67,9 +66,7 @@
           </button>
         </li>
         <li>&nbsp;</li>
-
       </ul>
-
     </div>
   </div>
   <!-- TOP MENU - END -->
@@ -108,7 +105,14 @@
         <p id="array-b" title=""></p>
         <p id="array-c" title=""></p>
       </div>
+      <br>
 
+      <div class="container">
+        <div id="transmission">
+          <p title="Incoming Transmissions">Incoming Transmissions</p>
+          <div id="img-anchor"></div>
+        </div>
+      </div>
     </nav>
     <!-- Sidebar - END -->
 
@@ -121,15 +125,12 @@
             <canvas id="canvasData"></canvas>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">close</button>
+            <button type="button" class="btn btn-outline pull-right" data-dismiss="modal">close</button>
           </div>
         </div>
       </div>
     </div>
     <!-- Modal - END -->
-
-
-
 
     <!-- MAIN - START -->
     <div id="content">
@@ -138,8 +139,6 @@
 
       <div id="log">
         <!-- <canvas id="example" class="center"></canvas> -->
-        
-
         <div id="anchor"></div>
       </div>
 
@@ -172,13 +171,16 @@
     </div>
   </div>
 
-
-
-
-
 </body>
+<!-- global variables -->
+<script type='text/javascript'>
+  var server = undefined;
+  var user = undefined;
+  var sound = true; // false for dev
+</script>
 <script src="js/glitch.js"></script>
 <script type="text/javascript" src="js/keyboard.js"></script>
+<script type="text/javascript" src="js/server.js"></script>
 <script type="text/javascript" src="js/chat.js"></script>
 <script type="text/javascript" src="js/arrays.js"></script>
 
