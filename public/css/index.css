@@ -52,7 +52,7 @@ pre {
   text-shadow: 0 0 10px #83B799;  
 }
 
-#input {
+#input, #width, #height {
   border-bottom: 1px solid #83B799;
   background-color: #383838;
   padding: 0.25em;
@@ -60,7 +60,7 @@ pre {
   font-weight: normal;
 }
 
-#input::before {
+#input::before, #width::before, #height::before {
   content: "> ";
 }
 
