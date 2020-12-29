@@ -35,6 +35,13 @@ function toggleSound() {
     }
 }
 
+function roomNameInput(event)
+{
+   if (event.keyCode == 13) {
+      return false;
+   }
+}
+
 // MAIN
 $(function () {
     // Execute a function when the user releases a key on the keyboard
@@ -87,7 +94,7 @@ $(function () {
 
     // TODO: enable for prod
     var form = $('<form>' +
-            '<input type="text" id="server" name="server" placeholder="room"/>&nbsp;&nbsp;'+
+            '<input type="text" id="server" name="server" placeholder="room" onkeypress="return roomNameInput(event);"/>&nbsp;&nbsp;'+
             '<input type="radio" id="muthur" name="login" value="muthur">&nbsp;'+
             '<label for="nuthur">MU/TU/UR</label>&nbsp;&nbsp;'+
             '<input type="radio" id="player" name="login" value="player">&nbsp;'+
