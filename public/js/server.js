@@ -55,7 +55,9 @@ function imgData(address, base64) {
 
     $(`#upload-${imgIdx}`).on("click", function () {
         new glitch("canvasData", base64);
-        // TODO: play sound here
+        if (sound) {
+            $("#camera").get(0).play();
+        }
         $('#incomingData').modal('show');
     });
     updateTransmissionData(`upload-${imgIdx}`, imgIdx, 3000);
