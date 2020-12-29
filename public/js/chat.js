@@ -89,6 +89,26 @@ $(function () {
         theme: 'monokai',
     });
 
+    $("#tutorialBtn").on("click", function () {
+        $('#tutorialData').modal('show');
+    });
+
+    // easter eggs
+    $("#dec20Btn").on("click", function () {
+        var msg = "Application built by /u/marques_art_boris. I hope my boss doesn't find me procrastinating.";
+        server.send(JSON.stringify({"content": msg, "from": user, "type": "text"}));
+    });
+
+    $("#sept09Btn").on("click", function () {
+        var msg = "If you wish to buy me a coffee, donate the money to any NGO. You are doing me a favor. Any more coffee and I'll have an overdose."
+        server.send(JSON.stringify({"content": msg, "from": user, "type": "text"}));
+    });
+
+    $("#aug05Btn").on("click", function () {
+        var msg = "I'm traveling to Canada to pursue a Ph.D. Please, feed my dog Boris while I am away.";
+        server.send(JSON.stringify({"content": msg, "from": user, "type": "text"}));
+    });
+
     var welcomeMessage = "Please wait... establishing connection";
     typeWriter("welcome", welcomeMessage, 0);
 
