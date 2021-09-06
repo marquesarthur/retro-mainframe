@@ -1,4 +1,3 @@
-
 // https://codepen.io/SupremoHQ/pen/vYEvMGG
 class glitch {
 

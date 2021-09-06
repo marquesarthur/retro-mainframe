@@ -4,6 +4,7 @@ var TYPEWRITER_SPEED = 25;
 
 var anchorDiv = document.getElementById("anchor");
 var anchorTransmissionDiv = document.getElementById("img-anchor");
+var myRoomID = undefined;
 
 var TRANSMISSIONS = [
     "UhoQYL", "N3ANAZ", "ea3wxP", "fGZHLn", "ByscOC", "1P64jQ", "0SEBPo", "86cR4t",
@@ -67,23 +68,35 @@ function imgData(address, base64) {
 function createServer(room, loginTmp) {
     try {
         user = loginTmp;
-        server = Bugout(room);
-        server.on("seen", function (address) {
-            log(address + " [connected]");
-        });
+        server = io.connect('/');
+        window.localStorage.setItem('my-room-ID', room);
+        myRoomID = room;
 
-        server.on("message", function (address, message) {
+        // server.on("seen", function (address) {
+        //     log(address + " [connected]");
+        // });
+
+        server.on("server-message", function (message) {
             var data = JSON.parse(message);
-            if (data.type === "text") {
-                var txt = data.content;
-                if (data.from === "muthur") {
-                    txt += " [MU/TH/UR 6000]"
+
+            if (data.room === myRoomID) {
+                if (data.type === "text") {
+                    var txt = data.content;
+                    if (data.from === "muthur") {
+                        txt += " [MU/TH/UR 6000]"
+                    } else {
+                        txt = data.from + ": " + txt
+                    }
+                    log(txt);
+                } else if (data.type === "base64") {
+                    var address = data.from;
+                    if (address === "muthur") {
+                        address = " [MU/TH/UR 6000]"
+                    }
+                    imgData(address, data.content);
+                } else {
+                    log("does not compute");
                 }
-                log(address + ": " + txt);
-            } else if (data.type === "base64") {
-                imgData(address, data.content);
-            } else {
-                log(address + ": does not compute");
             }
         });
 
