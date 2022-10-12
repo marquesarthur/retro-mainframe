@@ -28,7 +28,7 @@ function updateArrayData(id, title, speed) {
 // MAIN
 $(function () {
 
-    updateArrayData("array-a", "A_ARRAY", ARRAY_A_SPEED);
-    updateArrayData("array-b", "B_ARRAY", ARRAY_B_SPEED);
-    updateArrayData("array-c", "C_ARRAY", ARRAY_C_SPEED);
+    updateArrayData("array-a", "ENCRYPTION-A:", ARRAY_A_SPEED);
+    updateArrayData("array-b", "ENCRYPTION-B:", ARRAY_B_SPEED);
+    updateArrayData("array-c", "ENCRYPTION-C:", ARRAY_C_SPEED);
 });

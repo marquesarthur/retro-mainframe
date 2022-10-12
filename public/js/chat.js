@@ -42,6 +42,7 @@ function roomNameInput(event)
    }
 }
 
+
 // MAIN
 $(function () {
     // Execute a function when the user releases a key on the keyboard
@@ -95,24 +96,38 @@ $(function () {
         $('#tutorialData').modal('show');
     });
 
-    // easter eggs
-    $("#dec20Btn").on("click", function () {
-        var msg = "Application built by /u/marques_art_boris. I hope my boss doesn't find me procrastinating.";
+    // Site Logs
+    $("#21230315").on("click", function () {
+        var msg = "Log Entry 21230315:1345hrs - Chief Administration Officer";
+        server.emit('message', JSON.stringify({"content": msg, "from": 'Peter Garrett', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        setTimeout(function() {
+        var msg = "While digging out new tunnels on Level 8, our team made a remarkable discovery! The ruins of some ancient Alien Civilization.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },3000);
+        setTimeout(function() {
+        var msg = "We discovered something alive in the ruins. These spider like creatures emerged from these egg sack looking things.";
+        server.emit('message', JSON.stringify({"content": msg, "from": '', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+        },8000);
+    });
+
+    $("#21230323").on("click", function () {
+        var msgHeader = "Log Entry 21230315:1345hrs - Chief Administration Officer";
+        server.emit('message', JSON.stringify({"content": msgHeader, "from": 'Peter Garrett', "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
+    });
+
+    $("#21230325").on("click", function () {
+        var msg = "We discovered something alive in the ruins. These spider like creatures emerged from these egg sack looking things.";
         server.emit('message', JSON.stringify({"content": msg, "from": user, "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
     });
 
-    $("#sept09Btn").on("click", function () {
-        var msg = "If you wish to buy me a coffee, donate the money to any NGO. You are doing me a favor. Any more coffee and I'll have an overdose."
+    $("#21230405").on("click", function () {
+        var msg = "Final Log Entry. Everyone is dead. These monsters have killed everyone! God help me, there right outside the lab!";
         server.emit('message', JSON.stringify({"content": msg, "from": user, "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
     });
 
-    $("#aug05Btn").on("click", function () {
-        var msg = "I'm traveling to Canada to pursue a Ph.D. Please, feed my dog Boris while I am away.";
-        server.emit('message', JSON.stringify({"content": msg, "from": user, "type": "text", "room": window.localStorage.getItem('my-room-ID')}));
-    });
-
-    var welcomeMessage = "Please wait... establishing connection";
+    var welcomeMessage = "Secure Connection Established to MainFrame [Site LC1413]";
     typeWriter("welcome", welcomeMessage, 0);
+
 
     // TODO: enable for prod
     var form = $('<form>' +
