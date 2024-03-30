@@ -5,6 +5,7 @@ var TYPEWRITER_SPEED = 25;
 var anchorDiv = document.getElementById("anchor");
 var anchorTransmissionDiv = document.getElementById("img-anchor");
 var myRoomID = undefined;
+var sound = false;
 
 var TRANSMISSIONS = [
     "UhoQYL", "N3ANAZ", "ea3wxP", "fGZHLn", "ByscOC", "1P64jQ", "0SEBPo", "86cR4t",
@@ -68,16 +69,36 @@ function imgData(address, base64) {
 function createServer(room, loginTmp) {
     try {
         user = loginTmp;
-        server = io.connect('/');
+        // TODO - change this line -- if running local
+        // server = io.connect('/');
+        // https://stackoverflow.com/questions/10030639/socket-io-connect-event-does-not-fire-on-the-client
+        server = io.connect('http://localhost:8080'); // <---- BACKEND
         window.localStorage.setItem('my-room-ID', room);
         myRoomID = room;
+
+
+        // WHAT ARE THE BROADCAST EVENTS
+        // new zoom meeting
+        // zoom meeting has ended
+        // zoom meeting has started?
+        // user logs in/off
+        // reminder ???
 
         // server.on("seen", function (address) {
         //     log(address + " [connected]");
         // });
 
         server.on("server-message", function (message) {
-            var data = JSON.parse(message);
+            console.log(message);
+
+
+            var data = message; 
+            
+            if (typeof message === "string") {
+                data = JSON.parse(message);
+            }
+            
+            
 
             if (data.room === myRoomID) {
                 if (data.type === "text") {
@@ -98,6 +119,14 @@ function createServer(room, loginTmp) {
                     log("does not compute");
                 }
             }
+        });
+
+        server.on('error', function (data) {
+            console.log(data || 'error');
+        });
+
+        server.on('connect_failed', function (data) {
+            console.log(data || 'connect_failed');
         });
 
         if (user === "muthur") {
