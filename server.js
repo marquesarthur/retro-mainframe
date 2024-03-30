@@ -57,15 +57,15 @@ const server = require('http').createServer(app);
 const environment = process.env.NODE_ENV || "prod";
 
 
-let serverOrigin = "https://retro-mainframe.herokuapp.com/";
-if (environment === "local") {
-    console.log("LOCAL SERVER -- http://localhost:8080/");
-    console.log(environment);
-    serverOrigin = "http://localhost:8080/";
-} else {
-    console.log("PRODUCTION -- heroku");
-    console.log(serverOrigin);
-}
+let serverOrigin = "https://alien-muthur-48b77e64253b.herokuapp.com/";
+// if (environment === "local") {
+//     console.log("LOCAL SERVER -- http://localhost:8080/");
+//     console.log(environment);
+//     serverOrigin = "http://localhost:8080/";
+// } else {
+//     console.log("PRODUCTION -- heroku");
+//     console.log(serverOrigin);
+// }
 
 
 //Initialize application with route
