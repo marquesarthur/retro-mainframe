@@ -72,7 +72,7 @@ function createServer(room, loginTmp) {
         // TODO - change this line -- if running local
         // server = io.connect('/');
         // https://stackoverflow.com/questions/10030639/socket-io-connect-event-does-not-fire-on-the-client
-        server = io.connect('http://localhost:8080'); // <---- BACKEND
+        server = io.connect('https://alien-muthur-48b77e64253b.herokuapp.com/'); // <---- BACKEND
         window.localStorage.setItem('my-room-ID', room);
         myRoomID = room;
 
